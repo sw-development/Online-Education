@@ -1,8 +1,14 @@
 import React from "react";
 import "./App.css";
-import Navigation from "./components/Navigation/index";
+import Layout from "./Layout/layout";
+import Navigation from "./components/Navigation";
+
 function App() {
-  return <Navigation />;
+  return (
+    <Layout>
+      <Navigation />
+    </Layout>
+  );
 }
 
 export default App;

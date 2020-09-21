@@ -19,6 +19,11 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Nunito', sans-serif;
         font-size: 16px;
     }
+
+    a {
+        text-decoration: none;
+        color: #111;
+    }
 `;
 
 export default GlobalStyle;

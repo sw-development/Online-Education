@@ -16,6 +16,10 @@ const Wrapper = styled.div`
   ${({ theme }) => theme.mq.lg} {
     width: 1170px;
   }
+
+  ${({ theme }) => theme.mq.xlg} {
+    width: 1570px;
+  }
 `;
 
 const Layout = ({ children }) => {

@@ -3,6 +3,7 @@ const breakpoints = {
   sm: 768,
   md: 992,
   lg: 1200,
+  xlg: 1600,
 };
 
 export const theme = {
@@ -16,12 +17,12 @@ export const theme = {
       bold: 800,
     },
     size: {
-      xxs: "1.2rem",
-      xs: "1.4rem",
-      sm: "1.6rem",
-      md: "1.8rem",
-      lg: "2rem",
-      xlg: "3rem",
+      xxs: "1.4rem",
+      xs: "1.6rem",
+      sm: "2rem",
+      md: "3rem",
+      lg: "4rem",
+      xlg: "5rem",
     },
   },
   mq: Object.keys(breakpoints).reduce((acc, breakpoint) => {

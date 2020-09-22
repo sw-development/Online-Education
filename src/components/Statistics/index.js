@@ -24,18 +24,18 @@ const Wrapper = styled.div`
     }
   }
 `;
+
+const images = [image1, image2, image3];
 function Statisctics() {
   return (
     <Wrapper>
-      <p>
-        <img src={image1} alt='image' />
-      </p>
-      <p>
-        <img src={image2} alt='image' />
-      </p>
-      <p>
-        <img src={image3} alt='image' />
-      </p>
+      {images.map((image) => {
+        return (
+          <p>
+            <img src={image} alt='image' />
+          </p>
+        );
+      })}
     </Wrapper>
   );
 }

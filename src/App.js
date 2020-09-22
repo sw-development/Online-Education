@@ -1,8 +1,19 @@
 import React from "react";
-import "./App.css";
-import Navigation from "./components/Navigation/index";
-function App() {
-  return <Navigation />;
-}
+import Layout from "./Layout/layout";
+import Navigation from "./components/Navigation";
+import Hero from "./components/Hero";
+import Statisctics from "./components/Statistics/index";
+import Courses from "./components/Courses";
+
+const App = () => {
+  return (
+    <Layout>
+      <Navigation />
+      <Hero />
+      <Statisctics />
+      <Courses />
+    </Layout>
+  );
+};
 
 export default App;

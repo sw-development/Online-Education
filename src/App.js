@@ -5,7 +5,7 @@ import Hero from "./components/Hero";
 import Statisctics from "./components/Statistics/index";
 import Courses from "./components/Courses";
 
-function App() {
+const App = () => {
   return (
     <Layout>
       <Navigation />
@@ -14,6 +14,6 @@ function App() {
       <Courses />
     </Layout>
   );
-}
+};
 
 export default App;

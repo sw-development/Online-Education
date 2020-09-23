@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   display: flex;
   position: fixed;
+  align-items: center;
   top: 0;
   background-color: white;
   z-index: 99;

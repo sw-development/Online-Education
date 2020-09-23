@@ -54,9 +54,13 @@ const CardContent = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  width: 100%;
   justify-content: center;
   height: 40%;
   padding: 10px;
+  ${({ theme }) => theme.mq.md} {
+    width: 90%;
+  }
 `;
 
 const CardContentPrize = styled.p`

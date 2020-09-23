@@ -18,7 +18,7 @@ const Wrapper = styled.div`
   }
 
   ${({ theme }) => theme.mq.xlg} {
-    width: 1570px;
+    width: 1470px;
   }
 `;
 

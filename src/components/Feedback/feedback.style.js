@@ -103,30 +103,3 @@ export const StarSvg = styled(Star)`
   height: 25px;
   margin-right: 5px;
 `;
-
-export const OpinionArrows = styled.div`
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
-`;
-
-export const ArrowWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 20px;
-  border-radius: 15px;
-  background-color: transparent;
-  transition: all 0.3s linear;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #ecf0fb;
-  }
-`;
-
-export const Arrow = styled.svg`
-  width: 50px;
-  height: 40px;
-  fill: #2575e6;
-`;

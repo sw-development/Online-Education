@@ -3,6 +3,7 @@ import styled from "styled-components";
 import HeroImage from "../../assets/images/hero.jpg";
 
 import Container from "../Container";
+import PrimaryButton from "../PrimaryButton";
 
 const Wrapper = styled.div`
   margin-top: 100px;
@@ -63,42 +64,6 @@ const HeroParagraph = styled.p`
   }
 `;
 
-const HeroInputLabel = styled.label`
-  position: relative;
-  display: block;
-  height: 50px;
-  width: 250px;
-  border-radius: 15px;
-  background-color: #fff;
-  overflow: hidden;
-
-  ${({ theme }) => theme.mq.md} {
-    height: 60px;
-  }
-`;
-
-const HeroInput = styled.input`
-  height: 100%;
-  width: 100%;
-  padding: 0 50px 0 15px;
-  border: none;
-  background: none;
-  outline: none;
-`;
-
-const HeroButton = styled.button`
-  position: absolute;
-  right: 0;
-  height: 100%;
-  padding: 0 15px;
-  border: none;
-  color: #fff;
-  background-color: #2575e6;
-  font-weight: 400;
-  outline: none;
-  cursor: pointer;
-`;
-
 const Hero = () => {
   return (
     <Wrapper>
@@ -112,10 +77,7 @@ const Hero = () => {
               Lorem ipsum dolor sit amet, consectet adipiscing elit nullam
               consequat elementum varius.
             </HeroParagraph>
-            <HeroInputLabel>
-              <HeroInput placeholder="Search your courses" />
-              <HeroButton type="button"> Search</HeroButton>
-            </HeroInputLabel>
+            <PrimaryButton placeholder="Search your courses" text="Search" />
           </HeroContent>
         </HeroContentWrapper>
       </Container>

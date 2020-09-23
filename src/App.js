@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import Statisctics from "./components/Statistics/index";
 import Courses from "./components/Courses";
 import GetStartedLabel from "./components/GetStartedLabel";
+import Footer from "./components/Footer/index";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <Statisctics />
       <Courses />
       <GetStartedLabel />
+      <Footer />
     </Layout>
   );
 };

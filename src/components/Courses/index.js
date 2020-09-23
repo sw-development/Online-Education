@@ -47,7 +47,12 @@ const CoursesBtn = styled.button`
   outline: none;
   padding: 10px 3px;
   font-size: ${({ theme }) => theme.font.size.xxs};
+  transition: 0.2s ease-in;
   cursor: pointer;
+  &:hover {
+    background-color: #2575e6;
+    color: #fff;
+  }
 
   ${({ theme }) => theme.mq.md} {
     font-size: ${({ theme }) => theme.font.size.xs};

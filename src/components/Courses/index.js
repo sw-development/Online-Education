@@ -1,15 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 import CoursesCards from "../CoursesCards";
+import Container from "../../components/Container";
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 90%;
   margin: 0 auto;
+  margin-bottom: 30px;
 
   ${({ theme }) => theme.mq.md} {
-    width: 90%;
+    margin-bottom: 60px;
   } ;
 `;
 
@@ -65,25 +66,23 @@ const CoursesWrapper = styled.div`
   margin: 0 auto;
   ${({ theme }) => theme.mq.sm} {
     flex-direction: row;
-    width: 90%;
     flex-wrap: wrap;
-  }
-  ${({ theme }) => theme.mq.md} {
-    width: 80%;
   }
 `;
 
 const Courses = () => {
   return (
-    <Wrapper>
-      <CoursesHeader>
-        <CoursesTitle>Our Popular Courses</CoursesTitle>
-        <CoursesBtn>ALL COURSES</CoursesBtn>
-      </CoursesHeader>
-      <CoursesWrapper>
-        <CoursesCards />
-      </CoursesWrapper>
-    </Wrapper>
+    <Container>
+      <Wrapper>
+        <CoursesHeader>
+          <CoursesTitle>Our Popular Courses</CoursesTitle>
+          <CoursesBtn>ALL COURSES</CoursesBtn>
+        </CoursesHeader>
+        <CoursesWrapper>
+          <CoursesCards />
+        </CoursesWrapper>
+      </Wrapper>
+    </Container>
   );
 };
 

@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  Wrapper,
   Nav,
   NavLogo,
   NavList,
@@ -13,6 +14,7 @@ import {
 } from "./navigation.styles";
 import Logo from "../../assets/images/logo.png";
 import "./hamburger.css";
+import Container from "../Container/index";
 
 function Navigation() {
   const handleClick = () => {
@@ -31,32 +33,36 @@ function Navigation() {
           <HamburgerInner className='hamburger__inner'></HamburgerInner>
         </HamburgerBox>
       </Hamburger>
-      <Nav className='nav'>
-        <NavLogo>
-          <img src={Logo} alt='logo' />
-        </NavLogo>
-        <NavList>
-          <NavListItem>
-            <a href='#'>Home</a>
-          </NavListItem>
-          <NavListItem>
-            <a href='#'>About</a>
-          </NavListItem>
-          <NavListItem>
-            <a href='#'>Courses</a>
-          </NavListItem>
-          <NavListItem>
-            <a href='#'>Blog</a>
-          </NavListItem>
-          <NavListItem>
-            <a href='#'>Contact</a>
-          </NavListItem>
-        </NavList>
-        <NavActions>
-          <SecondaryBtn>Log in</SecondaryBtn>
-          <PrimaryBtn>Sign Up</PrimaryBtn>
-        </NavActions>
-      </Nav>
+      <Wrapper className='nav'>
+        <Container>
+          <Nav>
+            <NavLogo>
+              <img src={Logo} alt='logo' />
+            </NavLogo>
+            <NavList>
+              <NavListItem>
+                <a href='#'>Home</a>
+              </NavListItem>
+              <NavListItem>
+                <a href='#'>About</a>
+              </NavListItem>
+              <NavListItem>
+                <a href='#'>Courses</a>
+              </NavListItem>
+              <NavListItem>
+                <a href='#'>Blog</a>
+              </NavListItem>
+              <NavListItem>
+                <a href='#'>Contact</a>
+              </NavListItem>
+            </NavList>
+            <NavActions>
+              <SecondaryBtn>Log in</SecondaryBtn>
+              <PrimaryBtn>Sign Up</PrimaryBtn>
+            </NavActions>
+          </Nav>
+        </Container>
+      </Wrapper>
     </>
   );
 }

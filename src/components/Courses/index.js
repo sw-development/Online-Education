@@ -17,13 +17,13 @@ const Wrapper = styled.div`
 const CoursesHeader = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   margin-bottom: 50px;
 `;
 
 const CoursesTitle = styled.h2`
-  font-size: ${({ theme }) => theme.font.size.sm};
+  font-size: ${({ theme }) => theme.font.size.xs};
   position: relative;
   &:after {
     content: "";
@@ -45,7 +45,7 @@ const CoursesBtn = styled.button`
   border: 1px solid #2575e6;
   border-radius: 10px;
   outline: none;
-  padding: 10px 3px;
+  padding: 8px 6px;
   font-size: ${({ theme }) => theme.font.size.xxs};
   transition: 0.2s ease-in;
   cursor: pointer;
@@ -56,7 +56,7 @@ const CoursesBtn = styled.button`
 
   ${({ theme }) => theme.mq.md} {
     font-size: ${({ theme }) => theme.font.size.xs};
-    padding: 15px 5px;
+    padding: 10px 16px;
   }
 `;
 
@@ -67,7 +67,7 @@ const CoursesWrapper = styled.div`
   ${({ theme }) => theme.mq.sm} {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
   }
 `;
 

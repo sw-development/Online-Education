@@ -1,26 +1,38 @@
 import styled from "styled-components";
 
-export const Nav = styled.nav`
+export const Wrapper = styled.div`
+  display: flex;
   position: fixed;
   top: 0;
-  display: flex;
-  width: 100%;
   background-color: white;
-  margin: 0 auto;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 10vw;
   z-index: 99;
+  width: 100%;
   left: 50%;
   right: 50%;
-  transform: translateX(-50%);
+  height: 100vh;
+  transform: translateX(100%);
+
   -webkit-box-shadow: 0px 3px 11px -1px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 3px 11px -1px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 3px 11px -9px rgba(0, 0, 0, 0.75);
   transition: transform 0.3s 0.1s ease-in-out;
+
+  @media (min-width: 1000px) {
+    transform: translateX(-50%);
+    height: fit-content;
+  }
+`;
+export const Nav = styled.nav`
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+  z-index: 99;
+  height: 100%;
+
   @media (max-width: 1000px) {
-    transform: translateX(100%);
-    height: 100vh;
     flex-wrap: wrap;
     div,
     ul,

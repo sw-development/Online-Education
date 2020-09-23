@@ -10,6 +10,7 @@ import star from "../../assets/images/star.png";
 import asset1 from "../../assets/images/asset-15.png";
 import asset2 from "../../assets/images/asset-16.png";
 import asset3 from "../../assets/images/asset-17.png";
+import Container from "../Container/index";
 
 const images = [img1, img2, img3, img4, img5, img6];
 
@@ -34,8 +35,8 @@ const Card = styled.div`
     width: 45%;
   }
   ${({ theme }) => theme.mq.md} {
-    width: 25%;
-    margin: 0 30px;
+    width: 25.5%;
+    margin: 0;
     margin-bottom: 30px;
   }
 `;

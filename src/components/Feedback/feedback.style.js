@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { ReactComponent as Star } from "../../assets/images/star.svg";
 
 export const Wrapper = styled.div`
-  padding: 50px 0;
+  padding: 100px 0;
 `;
 
 export const FeedbackContainer = styled.div`

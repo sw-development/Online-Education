@@ -6,6 +6,7 @@ import Statisctics from "./components/Statistics/index";
 import Courses from "./components/Courses";
 import Feedback from "./components/Feedback";
 import Blog from "./components/Blog";
+import Newsletter from "./components/Newsletter";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <Courses />
       <Feedback />
       <Blog />
+      <Newsletter />
     </Layout>
   );
 };

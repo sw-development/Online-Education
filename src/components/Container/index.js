@@ -6,7 +6,6 @@ const Wrapper = styled.div`
   margin: 0 auto;
 
   ${({ theme }) => theme.mq.sm} {
-    margin: 0 auto;
     width: 750px;
   }
 

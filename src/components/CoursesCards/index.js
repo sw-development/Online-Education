@@ -6,11 +6,10 @@ import img3 from "../../assets/images/img-3.png";
 import img4 from "../../assets/images/img-2.png";
 import img5 from "../../assets/images/img-1.png";
 import img6 from "../../assets/images/img.png";
-import star from "../../assets/images/star.png";
 import asset1 from "../../assets/images/asset-15.png";
 import asset2 from "../../assets/images/asset-16.png";
 import asset3 from "../../assets/images/asset-17.png";
-import Container from "../Container/index";
+import { ReactComponent as StarSvg } from "../../assets/images/star.svg";
 
 const images = [img1, img2, img3, img4, img5, img6];
 
@@ -135,6 +134,16 @@ const TextParagraph = styled.p`
   height: 100%;
 `;
 
+const StarsWrapper = styled.div`
+  display: inline-block;
+`;
+
+const Stars = styled(StarSvg)`
+  width: 10px;
+  height: 10px;
+  margin-right: 3px;
+`;
+
 const CoursesCards = () => {
   return (
     <>
@@ -150,7 +159,13 @@ const CoursesCards = () => {
               <CardContentHeader>Application Development</CardContentHeader>
 
               <CardContentRating>
-                <img src={star} alt='star' />
+                <StarsWrapper>
+                  <Stars />
+                  <Stars />
+                  <Stars />
+                  <Stars />
+                  <Stars />
+                </StarsWrapper>
                 <TextParagraph>5.0 (2 Rating)</TextParagraph>
               </CardContentRating>
 

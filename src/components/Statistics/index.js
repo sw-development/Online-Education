@@ -31,9 +31,9 @@ const images = [image1, image2, image3];
 const Statisctics = () => {
   return (
     <Wrapper>
-      {images.map((image) => {
+      {images.map((image, index) => {
         return (
-          <ImageParagraph>
+          <ImageParagraph key={index}>
             <img src={image} alt='image' />
           </ImageParagraph>
         );

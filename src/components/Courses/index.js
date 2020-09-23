@@ -1,11 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import CoursesCards from "../CoursesCards";
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 90%;
   margin: 0 auto;
+
   ${({ theme }) => theme.mq.md} {
     width: 90%;
   } ;
@@ -16,6 +18,7 @@ const CoursesHeader = styled.div`
   justify-content: space-between;
   width: 90%;
   margin: 0 auto;
+  margin-bottom: 50px;
 `;
 
 const CoursesTitle = styled.h2`
@@ -43,7 +46,12 @@ const CoursesBtn = styled.button`
   outline: none;
   padding: 10px 3px;
   font-size: ${({ theme }) => theme.font.size.xxs};
+  transition: 0.2s ease-in;
   cursor: pointer;
+  &:hover {
+    background-color: #2575e6;
+    color: #fff;
+  }
 
   ${({ theme }) => theme.mq.md} {
     font-size: ${({ theme }) => theme.font.size.xs};
@@ -53,25 +61,16 @@ const CoursesBtn = styled.button`
 
 const CoursesWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
-`;
-
-const Card = styled.div`
-  display: flex;
-  width: 33%;
-  border-radius: 20px;
   flex-direction: column;
-`;
-
-const CardImage = styled.div`
-  height: 60%;
-`;
-
-const CardContent = styled.div`
-  height: 40%;
-  padding: 10px;
+  margin: 0 auto;
+  ${({ theme }) => theme.mq.sm} {
+    flex-direction: row;
+    width: 90%;
+    flex-wrap: wrap;
+  }
+  ${({ theme }) => theme.mq.md} {
+    width: 80%;
+  }
 `;
 
 const Courses = () => {
@@ -82,9 +81,7 @@ const Courses = () => {
         <CoursesBtn>ALL COURSES</CoursesBtn>
       </CoursesHeader>
       <CoursesWrapper>
-        <Card>
-          <CardImage></CardImage>
-        </Card>
+        <CoursesCards />
       </CoursesWrapper>
     </Wrapper>
   );

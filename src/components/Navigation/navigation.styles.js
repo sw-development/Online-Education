@@ -50,11 +50,12 @@ export const PrimaryBtn = styled.button`
   background-color: #2575e6;
   color: white;
   border: none;
-  border-radius: 5px;
-  padding: 5px 10px;
+  border-radius: 7px;
+  padding: 10px 20px;
   cursor: pointer;
   outline: none;
   font-size: 1.2em;
+  font-size: ${({ theme }) => theme.font.size.xxs};
 `;
 export const SecondaryBtn = styled.button`
   background-color: white;
@@ -62,6 +63,5 @@ export const SecondaryBtn = styled.button`
   border: none;
   padding: 5px 10px;
   cursor: pointer;
-  outline: none;
-  font-size: 1.2em;
+  outline: none; ;
 `;

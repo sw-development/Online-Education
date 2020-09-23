@@ -4,6 +4,7 @@ import Navigation from "./components/Navigation";
 import Hero from "./components/Hero";
 import Statisctics from "./components/Statistics/index";
 import Courses from "./components/Courses";
+import Feedback from "./components/Feedback";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Hero />
       <Statisctics />
       <Courses />
+      <Feedback />
     </Layout>
   );
 };

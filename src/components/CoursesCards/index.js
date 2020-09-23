@@ -23,10 +23,9 @@ const Card = styled.div`
   color: #7d7d7d;
   margin-bottom: 25px;
   transition: 0.3s linear;
-  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
-    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-    0 100px 80px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgb(0 0 0 / 0%),
+    0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgb(0 0 0 / 0%),
+    0 41.8px 33.4px rgb(0 0 0 / 0%), 0 100px 80px rgb(0 0 0 / 0%);
   &:hover {
     transform: scale(1.05);
   }
@@ -35,7 +34,8 @@ const Card = styled.div`
     width: 45%;
   }
   ${({ theme }) => theme.mq.md} {
-    width: 30%;
+    width: 25%;
+    margin: 0 30px;
     margin-bottom: 30px;
   }
 `;

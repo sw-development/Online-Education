@@ -67,6 +67,7 @@ const CoursesWrapper = styled.div`
   ${({ theme }) => theme.mq.sm} {
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
   }
 `;
 

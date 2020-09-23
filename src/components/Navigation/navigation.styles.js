@@ -1,16 +1,23 @@
 import styled from "styled-components";
+
 export const Nav = styled.nav`
   position: fixed;
   top: 0;
   display: flex;
-  width: 85%;
+  width: 100%;
+  background-color: white;
   margin: 0 auto;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 5px;
+  padding: 15px 10vw;
+  z-index: 99;
   left: 50%;
   right: 50%;
   transform: translateX(-50%);
+  -webkit-box-shadow: 0px 3px 11px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 3px 11px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 3px 11px -9px rgba(0, 0, 0, 0.75);
+  transition: transform 0.3s 0.1s ease-in-out;
   @media (max-width: 1000px) {
     transform: translateX(100%);
     height: 100vh;
@@ -23,6 +30,7 @@ export const Nav = styled.nav`
     }
   }
 `;
+
 export const NavLogo = styled.div`
   display: block;
 `;
@@ -35,9 +43,9 @@ export const NavList = styled.ul`
 `;
 export const NavListItem = styled.li`
   font-weight: 500;
-  margin: 0 10px;
-  @media (max-width: 1000px) {
-    margin: 10px 0;
+  margin: 10px 0;
+  @media (min-width: 1000px) {
+    margin: 0 10px;
   }
 `;
 export const NavActions = styled.div`
@@ -61,7 +69,68 @@ export const SecondaryBtn = styled.button`
   background-color: white;
   color: black;
   border: none;
-  padding: 5px 10px;
+  padding: 10px 20px;
   cursor: pointer;
-  outline: none; ;
+  outline: none;
+  font-size: ${({ theme }) => theme.font.size.xxs};
+`;
+
+export const Hamburger = styled.button`
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  display: inline-block;
+  cursor: pointer;
+  background-color: transparent;
+  z-index: 100;
+  border: 0;
+  margin: 0;
+  transition: transform 0.3s 0.1s ease-in-out;
+  @media (min-width: 1000px) {
+    display: none;
+  }
+`;
+
+export const HamburgerBox = styled.span`
+  width: 35px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+`;
+
+export const HamburgerInner = styled.span`
+  width: 100%;
+  height: 3px;
+  background-color: black;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color 0.1s 0.2s ease-in-out;
+  &:before {
+    content: "";
+    left: 0;
+    transition: transform 0.2s 0.2s ease-in-out;
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+  }
+  &:after {
+    content: "";
+    left: 0;
+    transition: transform 0.2s 0.2s ease-in-out;
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+  }
+
+  &:before {
+    top: -10px;
+  }
+  &:after {
+    top: 10px;
+  }
 `;

@@ -22,10 +22,15 @@ const Card = styled.div`
   flex-direction: column;
   color: #7d7d7d;
   margin-bottom: 25px;
+  transition: 0.3s linear;
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
     0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
     0 100px 80px rgba(0, 0, 0, 0.12);
+  &:hover {
+    transform: scale(1.05);
+  }
+
   ${({ theme }) => theme.mq.sm} {
     width: 45%;
   }
@@ -59,16 +64,17 @@ const CardContentPrize = styled.p`
   position: absolute;
   text-align: center;
   right: 15px;
-  bottom: -15px;
-  padding: 7px 10px;
+  bottom: -10px;
+  padding: 5px 5px;
   font-weight: bold;
   color: white;
   border-radius: 10px;
   z-index: 1;
   background-color: #2575e6;
   ${({ theme }) => theme.mq.sm} {
-    right: 25px;
-    padding: 10px 15px;
+    right: 20px;
+    bottom: -20px;
+    padding: 6px 6px;
   }
 `;
 
@@ -87,6 +93,7 @@ const CardContentRating = styled.div`
   justify-content: center;
   width: 100%;
   padding: 5px 0;
+  user-select: none;
   img {
     width: 50%;
   }
@@ -104,6 +111,7 @@ const InformationItem = styled.div`
   display: flex;
   align-items: center;
   margin: 3px;
+  user-select: none;
 `;
 
 const LineSeparator = styled.hr`

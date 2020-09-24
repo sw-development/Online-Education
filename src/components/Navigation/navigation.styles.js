@@ -32,13 +32,19 @@ export const Nav = styled.nav`
   padding: 15px 0;
   z-index: 99;
   height: 100%;
-
-  @media (max-width: 1000px) {
-    flex-wrap: wrap;
+  flex-wrap: wrap;
+  div,
+  ul,
+  li {
+    width: 100%;
+    text-align: center;
+  }
+  @media (min-width: 1000px) {
+    flex-wrap: nowrap;
     div,
     ul,
     li {
-      width: 100%;
+      width: fit-content;
       text-align: center;
     }
   }
@@ -63,9 +69,7 @@ export const NavListItem = styled.li`
 `;
 export const NavActions = styled.div`
   display: flex;
-  @media (max-width: 1000px) {
-    justify-content: center;
-  }
+  justify-content: center;
 `;
 export const PrimaryBtn = styled.button`
   background-color: ${({ theme }) => theme.colors.royalBlue};

@@ -36,7 +36,6 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
 
   ${({ theme }) => theme.mq.sm} {
     flex-direction: row;
@@ -57,9 +56,7 @@ const GirlCard = styled.div`
 const ContentCard = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin-bottom: 30px;
-  width: 90%;
   z-index: 1;
   & > ${PrimaryBtn} {
     align-self: flex-start;
@@ -99,7 +96,7 @@ const GetStartedLabel = () => {
             <PrimaryBtn>Get Started</PrimaryBtn>
           </ContentCard>
           <GirlCard>
-            <img src={GirlPhoto} alt="Girl photo" />
+            <img src={GirlPhoto} alt='Girl photo' />
           </GirlCard>
         </Wrapper>
       </Container>

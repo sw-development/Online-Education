@@ -8,13 +8,19 @@ import Container from "../../components/Container/index";
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 30px auto;
+  margin: 0 auto;
   align-items: center;
   justify-content: center;
+  padding: 50px 0 0;
+
+  ${({ theme }) => theme.mq.sm} {
+    padding: 100px 0 0;
+  }
+
   ${({ theme }) => theme.mq.md} {
     flex-direction: row;
     justify-content: space-between;
-    margin: 70px auto;
+    margin: 0 auto;
   }
 `;
 

@@ -12,6 +12,13 @@ const BackgroundWrapper = styled.div`
   width: 100%;
   background-color: ${({ theme }) => theme.colors.solitude};
   position: relative;
+  padding: 50px 0;
+
+  ${({ theme }) => theme.mq.sm} {
+    flex-direction: row;
+    padding: 100px 0;
+  }
+
   &:after {
     content: "";
     position: absolute;
@@ -29,13 +36,9 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+
   ${({ theme }) => theme.mq.sm} {
     flex-direction: row;
-    padding: 40px 0;
-  }
-  ${({ theme }) => theme.mq.lg} {
-    padding: 10vh 0;
   }
 `;
 

@@ -9,7 +9,11 @@ import ThirdBlogImage from "../../assets/images/img-3.png";
 
 const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.solitude};
-  padding: 100px 0;
+  padding: 50px 0;
+
+  ${({ theme }) => theme.mq.sm} {
+    padding: 100px 0;
+  }
 `;
 
 const Header = styled.div`

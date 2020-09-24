@@ -7,11 +7,11 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  margin-bottom: 30px;
+  padding: 50px 0;
 
-  ${({ theme }) => theme.mq.md} {
-    margin-bottom: 60px;
-  } ;
+  ${({ theme }) => theme.mq.sm} {
+    padding: 100px 0;
+  }
 `;
 
 const CoursesHeader = styled.div`

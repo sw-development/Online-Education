@@ -6,7 +6,12 @@ import Container from "../Container";
 import NewsletterBg from "../../assets/images/newsletter.png";
 
 const Wrapper = styled.div`
-  padding: 100px 0;
+  padding: 50px 0;
+
+  ${({ theme }) => theme.mq.sm} {
+    flex-direction: row;
+    padding: 100px 0;
+  }
 `;
 
 const NewsletterContent = styled.div`

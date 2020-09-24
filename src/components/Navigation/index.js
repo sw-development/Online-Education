@@ -13,12 +13,12 @@ import {
   HamburgerInner,
 } from "./navigation.styles";
 import Logo from "../../assets/images/logo.png";
-import "./hamburger.css";
+// import "./hamburger.css";
 import Container from "../Container/index";
 
 function Navigation() {
   const handleClick = () => {
-    const hamburger = document.querySelector(".hamburger");
+    const hamburger = document.querySelector(".hamburger__inner");
     const nav = document.querySelector(".nav");
     hamburger.classList.toggle("hamburger--active");
     nav.classList.toggle("active");

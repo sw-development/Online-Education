@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Wrapper,
   FeedbackContainer,
   FeedbackImage,
   FeedbackContent,
-  Title,
   Opinion,
   OpinionHeader,
   OpinionAvatar,
@@ -16,7 +15,7 @@ import {
   OpinionRate,
   StarSvg,
 } from "./feedback.style";
-
+import Title from "../Title";
 import Arrows from "../Arrows";
 import FeedbackImg from "../../assets/images/feedback.jpg";
 import OpinionOwnerImg from "../../assets/images/opinionowner.png";

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Title from "../Title";
 import CoursesCards from "../CoursesCards";
 import Container from "../../components/Container";
 
@@ -19,26 +20,9 @@ const CoursesHeader = styled.div`
   justify-content: space-between;
   width: 100%;
   margin: 0 auto;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
 `;
 
-const CoursesTitle = styled.h2`
-  font-size: ${({ theme }) => theme.font.size.xs};
-  position: relative;
-  &:after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom: -20px;
-    width: 50%;
-    height: 3px;
-    background-color: ${({ theme }) => theme.colors.dodgerBlue};
-  }
-  ${({ theme }) => theme.mq.md} {
-    font-size: ${({ theme }) => theme.font.size.lg};
-  }
-`;
 const CoursesBtn = styled.button`
   color: ${({ theme }) => theme.colors.royalBlue};
   background-color: ${({ theme }) => theme.colors.white};
@@ -46,6 +30,7 @@ const CoursesBtn = styled.button`
   border-radius: 10px;
   outline: none;
   padding: 8px 6px;
+  margin-left: 5px;
   font-size: ${({ theme }) => theme.font.size.xxs};
   transition: 0.2s ease-in;
   cursor: pointer;
@@ -76,7 +61,7 @@ const Courses = () => {
     <Container>
       <Wrapper>
         <CoursesHeader>
-          <CoursesTitle>Our Popular Courses</CoursesTitle>
+          <Title>Our Popular Courses</Title>
           <CoursesBtn>ALL COURSES</CoursesBtn>
         </CoursesHeader>
         <CoursesWrapper>

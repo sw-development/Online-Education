@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import BgDecorator from "../../assets/images/decoration.png";
 import GirlPhoto from "../../assets/images/thumb_and_video.png";
+import Title from "../Title";
 import { PrimaryBtn } from "../Navigation/navigation.styles";
 import Container from "../../components/Container";
 
@@ -69,30 +70,11 @@ const ContentCard = styled.div`
   }
 `;
 
-const ContentHeader = styled.h2`
-  font-size: ${({ theme }) => theme.font.size.sm};
-  position: relative;
-  width: 100%;
-  margin: 25px 0;
-  &:after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom: -20px;
-    width: 30%;
-    height: 3px;
-    background-color: ${({ theme }) => theme.colors.dodgerBlue};
-  }
-  ${({ theme }) => theme.mq.md} {
-    font-size: ${({ theme }) => theme.font.size.lg};
-  }
-`;
-
 const ContentDescription = styled.p`
   display: block;
   color: ${({ theme }) => theme.colors.grey};
   margin-bottom: 15px;
+  margin-top: 30px;
   font-size: ${({ theme }) => theme.font.size.xxs};
   ${({ theme }) => theme.mq.sm} {
     font-size: ${({ theme }) => theme.font.size.xs};
@@ -106,9 +88,7 @@ const GetStartedLabel = () => {
       <Container>
         <Wrapper>
           <ContentCard>
-            <ContentHeader>
-              Find Your Course That Makes Bright Future
-            </ContentHeader>
+            <Title>Find Your Course That Makes Bright Future</Title>
             <ContentDescription>
               Lorem ipsum dolor sit amet, consecteturei adipiscing elit nulla
               elementum sem vel porttitorr ornare nullam ultricies turpis magnai

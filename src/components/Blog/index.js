@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Container from "../Container";
+import Title from "../Title";
 import Arrows from "../Arrows";
 import BlogCard from "../BlogCard";
 import FirstBlogImage from "../../assets/images/img-1.png";
@@ -22,31 +23,11 @@ const Header = styled.div`
   align-items: center;
 `;
 
-const Title = styled.h2`
-  position: relative;
-  font-size: ${({ theme }) => theme.font.size.sm};
-  margin-bottom: 20px;
-  &:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -20px;
-    width: 150px;
-    height: 5px;
-    border-radius: 15px;
-    background-color: ${({ theme }) => theme.colors.dodgerBlue};
-  }
-
-  ${({ theme }) => theme.mq.md} {
-    font-size: ${({ theme }) => theme.font.size.lg};
-  }
-`;
-
 const BlogCardsWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 75px;
   flex-wrap: wrap;
 
   ${({ theme }) => theme.mq.sm} {

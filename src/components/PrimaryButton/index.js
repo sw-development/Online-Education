@@ -37,12 +37,19 @@ const Button = styled.button`
   font-weight: 400;
   outline: none;
   cursor: pointer;
+  transition: 0.3s all linear;
+  &:hover,
+  &:active {
+    color: #2575e6;
+    background-color: #fff;
+    outline: solid #2575e6;
+  }
 `;
 
 const PrimaryButton = ({ placeholder, text, visibility, lg }) => (
   <InputLabel visibility={visibility} lg={lg}>
     <Input placeholder={placeholder} />
-    <Button type="button"> {text}</Button>
+    <Button type='button'> {text}</Button>
   </InputLabel>
 );
 

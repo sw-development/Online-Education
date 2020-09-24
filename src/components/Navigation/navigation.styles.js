@@ -22,6 +22,9 @@ export const Wrapper = styled.div`
     transform: translateX(-50%);
     height: fit-content;
   }
+  &.active {
+    transform: translateX(-50%) !important;
+  }
 `;
 export const Nav = styled.nav`
   display: flex;
@@ -76,16 +79,31 @@ export const PrimaryBtn = styled.button`
   cursor: pointer;
   outline: none;
   font-size: 1.2em;
+  border: 1px solid transparent;
   font-size: ${({ theme }) => theme.font.size.xxs};
+  transition: 0.3s all linear;
+  &:active,
+  &:hover {
+    border: 1px solid #2575e6;
+    color: #2575e6;
+    background-color: #fff;
+  }
 `;
 export const SecondaryBtn = styled.button`
   background-color: white;
   color: black;
-  border: none;
+  border: 1px solid transparent;
+  border-radius: 7px;
   padding: 10px 20px;
   cursor: pointer;
   outline: none;
   font-size: ${({ theme }) => theme.font.size.xxs};
+  transition: 0.3s all linear;
+  &:hover,
+  &:active {
+    border: 0.5px solid #000;
+    text-decoration: underline;
+  }
 `;
 
 export const Hamburger = styled.button`
@@ -121,6 +139,7 @@ export const HamburgerInner = styled.span`
   top: 50%;
   transform: translateY(-50%);
   transition: background-color 0.1s 0.2s ease-in-out;
+
   &:before {
     content: "";
     left: 0;
@@ -145,5 +164,14 @@ export const HamburgerInner = styled.span`
   }
   &:after {
     top: 10px;
+  }
+  &.hamburger--active {
+    background-color: transparent;
+    &:after {
+      transform: translateY(-10px) rotate(-45deg);
+    }
+    &:before {
+      transform: translateY(10px) rotate(45deg);
+    }
   }
 `;

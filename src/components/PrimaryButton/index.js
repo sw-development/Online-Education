@@ -7,7 +7,7 @@ const InputLabel = styled.label`
   height: 50px;
   width: ${({ lg }) => (lg ? "300px" : "250px")};
   border-radius: 15px;
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.colors.white};
   ${({ visibility }) =>
     visibility ? "box-shadow: 0 20px 52px rgba(0, 74, 180, .14)" : null};
   overflow: hidden;
@@ -32,9 +32,8 @@ const Button = styled.button`
   height: 100%;
   padding: 0 15px;
   border: none;
-  color: #fff;
-  background-color: #2575e6;
-  font-weight: 400;
+  color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.royalBlue};
   outline: none;
   cursor: pointer;
 `;

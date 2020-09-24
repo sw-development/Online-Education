@@ -24,7 +24,7 @@ const ArrowWrapper = styled.div`
   cursor: pointer;
 
   &:hover {
-    background-color: #ecf0fb;
+    background-color: ${({ theme }) => theme.colors.solitude};
   }
 `;
 

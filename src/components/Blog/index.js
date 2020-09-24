@@ -8,7 +8,7 @@ import SecondBlogImage from "../../assets/images/img-2.png";
 import ThirdBlogImage from "../../assets/images/img-3.png";
 
 const Wrapper = styled.div`
-  background-color: #ecf0fb;
+  background-color: ${({ theme }) => theme.colors.solitude};
   padding: 100px 0;
 `;
 
@@ -30,7 +30,7 @@ const Title = styled.h2`
     width: 150px;
     height: 5px;
     border-radius: 15px;
-    background-color: #006aff;
+    background-color: ${({ theme }) => theme.colors.dodgerBlue};
   }
 
   ${({ theme }) => theme.mq.md} {
@@ -58,9 +58,9 @@ const Blog = () => (
         <Arrows />
       </Header>
       <BlogCardsWrapper>
-        <BlogCard img={FirstBlogImage} />
-        <BlogCard img={SecondBlogImage} />
-        <BlogCard img={ThirdBlogImage} />
+        <BlogCard img={FirstBlogImage} alt="Computer" />
+        <BlogCard img={SecondBlogImage} alt="Writing" />
+        <BlogCard img={ThirdBlogImage} alt="Girl" />
       </BlogCardsWrapper>
     </Container>
   </Wrapper>

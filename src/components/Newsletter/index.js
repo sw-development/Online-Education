@@ -21,8 +21,8 @@ const NewsletterContent = styled.div`
 
 const Title = styled.h2`
   font-size: ${({ theme }) => theme.font.size.lg};
-  font-weight: 800;
-  color: #313131;
+  font-weight: ${({ theme }) => theme.font.weight.xbold};
+  color: ${({ theme }) => theme.colors.black};
   margin-bottom: 15px;
 `;
 

@@ -42,7 +42,7 @@ const HeroContent = styled.div`
 
 const HeroHeading = styled.h1`
   margin-bottom: 20px;
-  color: #fff;
+  color: ${({ theme }) => theme.colors.white};
   font-size: ${({ theme }) => theme.font.size.md};
 
   ${({ theme }) => theme.mq.sm} {
@@ -56,7 +56,7 @@ const HeroHeading = styled.h1`
 
 const HeroParagraph = styled.p`
   margin-bottom: 20px;
-  color: #fff;
+  color: ${({ theme }) => theme.colors.white};
   font-size: ${({ theme }) => theme.font.size.xs};
 
   ${({ theme }) => theme.mq.xs} {

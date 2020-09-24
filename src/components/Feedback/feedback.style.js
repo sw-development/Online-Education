@@ -41,7 +41,7 @@ export const Title = styled.h2`
     width: 150px;
     height: 5px;
     border-radius: 15px;
-    background-color: #006aff;
+    background-color: ${({ theme }) => theme.colors.dodgerBlue};
   }
 
   ${({ theme }) => theme.mq.md} {
@@ -66,8 +66,8 @@ export const OpinionAvatar = styled.img`
   margin-right: 15px;
 `;
 
-export const OpinionOwner = styled.h4`
-  font-weight: bold;
+export const OpinionOwner = styled.h3`
+  font-weight: ${({ theme }) => theme.font.weight.bold};
   font-size: ${({ theme }) => theme.font.size.sm};
   margin-bottom: 5px;
 `;

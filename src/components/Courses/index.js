@@ -33,15 +33,15 @@ const CoursesTitle = styled.h2`
     bottom: -20px;
     width: 50%;
     height: 3px;
-    background-color: #006aff;
+    background-color: ${({ theme }) => theme.colors.dodgerBlue};
   }
   ${({ theme }) => theme.mq.md} {
     font-size: ${({ theme }) => theme.font.size.lg};
   }
 `;
 const CoursesBtn = styled.button`
-  color: #2575e6;
-  background-color: white;
+  color: ${({ theme }) => theme.colors.royalBlue};
+  background-color: ${({ theme }) => theme.colors.white};
   border: 1px solid #2575e6;
   border-radius: 10px;
   outline: none;
@@ -50,8 +50,8 @@ const CoursesBtn = styled.button`
   transition: 0.2s ease-in;
   cursor: pointer;
   &:hover {
-    background-color: #2575e6;
-    color: #fff;
+    background-color: ${({ theme }) => theme.colors.royalBlue};
+    color: ${({ theme }) => theme.colors.white};
   }
 
   ${({ theme }) => theme.mq.md} {

@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   position: fixed;
   align-items: center;
   top: 0;
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.white};
   z-index: 99;
   width: 100%;
   left: 50%;
@@ -55,7 +55,7 @@ export const NavList = styled.ul`
   flex-wrap: wrap;
 `;
 export const NavListItem = styled.li`
-  font-weight: 500;
+  font-weight: ${({ theme }) => theme.font.weight.medium};
   margin: 10px 0;
   @media (min-width: 1000px) {
     margin: 0 10px;
@@ -68,8 +68,8 @@ export const NavActions = styled.div`
   }
 `;
 export const PrimaryBtn = styled.button`
-  background-color: #2575e6;
-  color: white;
+  background-color: ${({ theme }) => theme.colors.royalBlue};
+  color: ${({ theme }) => theme.colors.white};
   border: none;
   border-radius: 7px;
   padding: 10px 20px;
@@ -79,8 +79,8 @@ export const PrimaryBtn = styled.button`
   font-size: ${({ theme }) => theme.font.size.xxs};
 `;
 export const SecondaryBtn = styled.button`
-  background-color: white;
-  color: black;
+  background-color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.black};
   border: none;
   padding: 10px 20px;
   cursor: pointer;
@@ -115,7 +115,7 @@ export const HamburgerBox = styled.span`
 export const HamburgerInner = styled.span`
   width: 100%;
   height: 3px;
-  background-color: black;
+  background-color: ${({ theme }) => theme.colors.black};
   position: absolute;
   left: 0;
   top: 50%;
@@ -127,7 +127,7 @@ export const HamburgerInner = styled.span`
     transition: transform 0.2s 0.2s ease-in-out;
     width: 100%;
     height: 3px;
-    background-color: black;
+    background-color: ${({ theme }) => theme.colors.black};
     position: absolute;
   }
   &:after {
@@ -136,7 +136,7 @@ export const HamburgerInner = styled.span`
     transition: transform 0.2s 0.2s ease-in-out;
     width: 100%;
     height: 3px;
-    background-color: black;
+    background-color: ${({ theme }) => theme.colors.black};
     position: absolute;
   }
 

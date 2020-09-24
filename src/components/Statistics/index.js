@@ -34,7 +34,7 @@ const Statisctics = () => {
         {images.map((image, index) => {
           return (
             <ImageParagraph key={index}>
-              <img src={image} alt='Statisctics' />
+              <img src={image} alt="Statisctics" />
             </ImageParagraph>
           );
         })}

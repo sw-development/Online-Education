@@ -8,13 +8,20 @@ const breakpoints = {
 
 export const theme = {
   colors: {
-    white: "#fff",
+    white: "#FFF",
+    black: "#000",
+    grey: "#7D7D7D",
+    solitude: "#ECF0FB",
+    dodgerBlue: "#006AFF",
+    royalBlue: "#2575E6",
   },
   font: {
     weight: {
-      thin: 300,
-      regular: 400,
-      bold: 800,
+      light: 300,
+      medium: 500,
+      semibold: 600,
+      bold: 700,
+      xbold: 800,
     },
     size: {
       xxs: "1.4rem",

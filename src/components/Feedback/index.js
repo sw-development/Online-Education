@@ -26,13 +26,13 @@ const Feedback = () => (
   <Wrapper>
     <Container>
       <FeedbackContainer>
-        <FeedbackImage src={FeedbackImg} />
+        <FeedbackImage src={FeedbackImg} alt="Boy" />
 
         <FeedbackContent>
           <Title>Students Feedback</Title>
           <Opinion>
             <OpinionHeader>
-              <OpinionAvatar src={OpinionOwnerImg} />
+              <OpinionAvatar src={OpinionOwnerImg} alt="Boy" />
               <div>
                 <OpinionOwner>Washington Sundar</OpinionOwner>
                 <OpinionOwnerStatus>Student of E-Learn</OpinionOwnerStatus>

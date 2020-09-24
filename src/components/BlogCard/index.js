@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
   border-radius: 15px;
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.colors.white};
   max-width: 360px;
   margin-bottom: 25px;
 `;
@@ -19,31 +19,31 @@ const Content = styled.div`
 
 const Date = styled.span`
   margin-right: 15px;
-  color: #7d7d7d;
+  color: ${({ theme }) => theme.colors.grey};
   font-size: ${({ theme }) => theme.font.size.xxs};
 `;
 
 const Comments = styled.span`
-  color: #7d7d7d;
+  color: ${({ theme }) => theme.colors.grey};
   font-size: ${({ theme }) => theme.font.size.xxs};
 `;
 
-const Title = styled.h4`
+const Title = styled.h3`
   margin: 20px 0;
-  font-weight: 600;
+  font-weight: ${({ theme }) => theme.font.weight.semibold};
   font-size: ${({ theme }) => theme.font.size.sm};
 `;
 
 const Link = styled.a`
   font-size: ${({ theme }) => theme.font.size.xxs};
-  color: #2575e6;
+  color: ${({ theme }) => theme.colors.royalBlue};
   text-transform: capitalize;
 `;
 
-const BlogCard = ({ img }) => (
+const BlogCard = ({ img, alt }) => (
   <Wrapper>
     <div>
-      <Image src={img} />
+      <Image src={img} alt={alt} />
     </div>
     <Content>
       <Date>April 22,2020</Date>

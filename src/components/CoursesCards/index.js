@@ -20,7 +20,7 @@ const Card = styled.div`
   margin: 0 auto;
   border-radius: 20px;
   flex-direction: column;
-  color: #7d7d7d;
+  color: ${({ theme }) => theme.colors.grey};
   margin-bottom: 25px;
   transition: 0.3s linear;
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgb(0 0 0 / 0%),
@@ -70,11 +70,11 @@ const CardContentPrize = styled.p`
   right: 15px;
   bottom: -10px;
   padding: 5px 5px;
-  font-weight: bold;
-  color: white;
+  font-weight: ${({ theme }) => theme.font.weight.bold};
+  color: ${({ theme }) => theme.colors.white};
   border-radius: 10px;
   z-index: 1;
-  background-color: #2575e6;
+  background-color: ${({ theme }) => theme.colors.royalBlue};
   ${({ theme }) => theme.mq.sm} {
     right: 20px;
     bottom: -20px;
@@ -83,9 +83,9 @@ const CardContentPrize = styled.p`
 `;
 
 const CardContentHeader = styled.p`
-  font-weight: bold;
+  font-weight: ${({ theme }) => theme.font.weight.bold};
   display: block;
-  color: #000;
+  color: ${({ theme }) => theme.colors.black};
   padding: 5px 0;
   width: 100%;
   text-align: left;
@@ -122,7 +122,7 @@ const LineSeparator = styled.hr`
   display: block;
   width: 100%;
   margin: 5px 0;
-  background-color: #2575e6;
+  background-color: ${({ theme }) => theme.colors.royalBlue};
 `;
 
 const TextParagraph = styled.p`
@@ -151,7 +151,7 @@ const CoursesCards = () => {
         return (
           <Card key={index}>
             <CardImage>
-              <img src={image} alt='Person' />
+              <img src={image} alt="Person" />
               <CardContentPrize>$20</CardContentPrize>
             </CardImage>
 
@@ -173,15 +173,15 @@ const CoursesCards = () => {
 
               <CardContentInformation>
                 <InformationItem>
-                  <img src={asset1} alt='asset' />
+                  <img src={asset1} alt="asset" />
                   <TextParagraph>2246</TextParagraph>
                 </InformationItem>
                 <InformationItem>
-                  <img src={asset2} alt='asset' />
+                  <img src={asset2} alt="asset" />
                   <TextParagraph>12h 28m</TextParagraph>
                 </InformationItem>
                 <InformationItem>
-                  <img src={asset3} alt='asset' />{" "}
+                  <img src={asset3} alt="asset" />{" "}
                   <TextParagraph>Lectures</TextParagraph>
                 </InformationItem>
               </CardContentInformation>

@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import Bg from "../../assets/images/bg.png";
 import BgDecorator from "../../assets/images/decoration.png";
-import GirlPhoto from "../../assets/images/thumb and video.png";
+import GirlPhoto from "../../assets/images/thumb_and_video.png";
 import { PrimaryBtn } from "../Navigation/navigation.styles";
 import Container from "../../components/Container";
 
@@ -11,7 +10,7 @@ const BackgroundWrapper = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-image: url(${Bg});
+  background-color: ${({ theme }) => theme.colors.solitude};
   position: relative;
   &:after {
     content: "";
@@ -80,7 +79,7 @@ const ContentHeader = styled.h2`
     bottom: -20px;
     width: 30%;
     height: 3px;
-    background-color: #006aff;
+    background-color: ${({ theme }) => theme.colors.dodgerBlue};
   }
   ${({ theme }) => theme.mq.md} {
     font-size: ${({ theme }) => theme.font.size.lg};
@@ -89,7 +88,7 @@ const ContentHeader = styled.h2`
 
 const ContentDescription = styled.p`
   display: block;
-  color: #6b6b6b;
+  color: ${({ theme }) => theme.colors.grey};
   margin-bottom: 15px;
   font-size: ${({ theme }) => theme.font.size.xxs};
   ${({ theme }) => theme.mq.sm} {
@@ -117,7 +116,7 @@ const GetStartedLabel = () => {
             <PrimaryBtn>Get Started</PrimaryBtn>
           </ContentCard>
           <GirlCard>
-            <img src={GirlPhoto} alt='Girl photo' />
+            <img src={GirlPhoto} alt="Girl photo" />
           </GirlCard>
         </Wrapper>
       </Container>

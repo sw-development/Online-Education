@@ -6,8 +6,7 @@ import Logo from "../../assets/images/logo.png";
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  /* justify-content: center; */
-  background-color: #ecf0fb;
+  background-color: ${({ theme }) => theme.colors.solitude};
   width: 100%;
   padding: 20px;
 `;
@@ -24,7 +23,7 @@ const FooterContainer = styled.div`
 `;
 const FooterDescription = styled.p`
   display: block;
-  color: #9da1a7;
+  color: ${({ theme }) => theme.colors.grey};
   padding: 10px 0;
   font-size: ${({ theme }) => theme.font.size.xxs};
 `;
@@ -34,7 +33,7 @@ const Footer = () => {
     <Wrapper>
       <Container>
         <FooterContainer>
-          <img src={Logo} alt='Logo' />
+          <img src={Logo} alt="Logo" />
           <FooterDescription>
             Copyright @ Miltion Debnath 2020, All Rights Reserved
           </FooterDescription>
